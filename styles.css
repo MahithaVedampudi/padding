@@ -8,6 +8,14 @@ body {
     background: #f8f9fa;
 }
 
+.page-bg {
+    transition: background-color 0.5s ease;
+}
+
+.page-bg-alternate {
+    background: linear-gradient(135deg, #fff2f2 0%, #c4f7c5 100%);
+}
+
 .celebal-box {
     position: relative;
     width: 320px;
