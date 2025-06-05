@@ -1,0 +1,116 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #f8f9fa;
+}
+
+.celebal-box {
+    position: relative;
+    width: 320px;
+    height: 220px;
+    background: linear-gradient(145deg, #6e45e2 0%, #88d3ce 100%);
+    border-radius: 16px;
+    margin: 30px;
+    padding: 40px;
+    outline: 5px dashed rgba(220, 202, 202, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-shadow: 0 10px 30px rgba(110, 69, 226, 0.3);
+    transition: all 0.4s ease;
+    overflow: hidden;
+    border: none;
+}
+
+.celebal-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        transparent 48%,
+        rgba(255,255,255,0.1) 49%,
+        rgba(255,255,255,0.1) 51%,
+        transparent 52%
+    );
+    background-size: 10px 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.celebal-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(110, 69, 226, 0.4);
+}
+
+.celebal-box:hover::before {
+    opacity: 1;
+}
+
+.celebal-text {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.celebal-box:hover .celebal-text {
+    transform: scale(1.05);
+}
+
+.corner-decor {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+.top-left {
+    top: 12px;
+    left: 12px;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 12px 0 0 0;
+}
+
+.top-right {
+    top: 12px;
+    right: 12px;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 0 12px 0 0;
+}
+
+.bottom-left {
+    bottom: 12px;
+    left: 12px;
+    border-right: none;
+    border-top: none;
+    border-radius: 0 0 0 12px;
+}
+
+.bottom-right {
+    bottom: 12px;
+    right: 12px;
+    border-left: none;
+    border-top: none;
+    border-radius: 0 0 12px 0;
+}
+
+.celebal-box:hover .corner-decor {
+    border-color: white;
+    width: 32px;
+    height: 32px;
+}
