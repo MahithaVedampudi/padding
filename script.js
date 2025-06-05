@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     const box = document.getElementById('celebalBox');
+    const body = document.querySelector('body');
     
-    // Simple click interaction
     box.addEventListener('click', function() {
+        body.classList.toggle('page-bg-alternate');
+        
         const text = box.querySelector('.celebal-text');
-        text.textContent = 'Welcome!';
+        text.textContent = 'Clicked!';
         setTimeout(() => {
             text.textContent = 'Celebal';
         }, 1000);
